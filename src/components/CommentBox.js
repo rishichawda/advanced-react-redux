@@ -16,7 +16,9 @@ class CommentBox extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.saveComment(this.state.comment);
+        if(this.state.comment!=='') {
+            this.props.saveComment(this.state.comment);
+        }
         this.setState({ 
             comment: ''
          })
