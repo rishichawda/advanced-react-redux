@@ -1,4 +1,4 @@
-import { SAVE_COMMENT, FETCH_COMMENT } from 'actions/types';
+import { SAVE_COMMENT, FETCH_COMMENT, CHANGE_AUTH } from 'actions/types';
 import Axios from 'axios';
 
 export function saveComment(comment) { 
@@ -16,3 +16,10 @@ export function saveComment(comment) {
          payload: request
      }
   }
+
+  export function changeAuthenticationState(LoggedIn) { 
+      return {
+          type: CHANGE_AUTH,
+          payload: LoggedIn
+      }
+   }
