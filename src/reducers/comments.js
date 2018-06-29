@@ -5,6 +5,7 @@ export default function addComment(state = [], action) {
         case SAVE_COMMENT: 
             return [ action.payload, ...state ];
         case FETCH_COMMENT:
+            // debugger;
             const comments = action.payload.data.slice(0,7).map(
                 (value)=>{
                     return value.body
